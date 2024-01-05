@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Covid Dangerous Areas</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff; /* Màu xanh nhạt */
+            color: #333; /* Màu chữ dark gray */
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #00bcd4; /* Màu xanh biển nhạt cho tiêu đề */
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff; /* Màu nền trắng */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cfe9e4; /* Màu viền xanh nhạt */
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #fcfcfc; /* Màu nền xanh nhạt */
+            color: #333;
+        }
+
+        button {
+            background-color: #a0bec5; /* Màu xanh biển */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #18423d; /* Màu xanh biển đậm khi hover */
+        }
+
+        footer {
+            margin-top: 20px;
+            color: #b4cac7; /* Màu chữ xanh biển đậm */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Prediction Covid Dangerous Areas</h2>
+    <form action="/result" method="post">
+        <label for="vaccination">Vaccination:</label>
+        <input type="text" name="vaccination" required><br>
+
+        <label for="observationdate">ObservationDate:</label>
+        <input type="text" name="observationdate" required><br>
+
+        <label for="province/State">Province/State:</label>
+        <input type="text" name="province/State" required><br>
+
+        <label for="country/Region">Country/Region:</label>
+        <input type="text" name="country/Region" required><br>
+
+        <label for="confirmed">Confirmed:</label>
+        <input type="text" name="confirmed" required><br>
+
+        <label for="deaths">Deaths:</label>
+        <input type="text" name="deaths" required><br>
+
+        <label for="recovered">Recovered:</label>
+        <input type="text" name="recovered" required><br>
+
+        <label for="population">Population:</label>
+        <input type="text" name="population" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <footer>
+    </footer>
+</body>
+
+</html>

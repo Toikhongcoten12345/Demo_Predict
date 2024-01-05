@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Màu xanh biển nhạt */
+            color: #333; /* Màu chữ đen */
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #003366; /* Màu xanh biển đậm */
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #003366; /* Màu xanh biển đậm */
+        }
+
+        a {
+            color: #003366; /* Màu xanh biển đậm */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    
+    {% if prediction == -1 %}
+    <p class="error">Invalid input. Please provide values for all 8 features.</p>
+{% else %}
+    <p>The predicted danger level is: {{ prediction }}</p>
+    <a href="/">Go back to input page</a>
+{% endif %}
+</body>
+</html>
